@@ -1,10 +1,10 @@
 // routing
 
 // dependency
-const { sampleRoutes } = require('./handler/routerHandler/sampleRoutes');
+const { sampleHnadler } = require('./handler/routerHandler/sampleRoutes');
 
 const route = {
-    sample: sampleRoutes,
+    sample: sampleHnadler,
 };
 
 module.exports = route;

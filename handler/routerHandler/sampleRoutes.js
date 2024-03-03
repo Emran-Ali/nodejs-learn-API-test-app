@@ -2,8 +2,10 @@
 
 const handler = {};
 
-handler.sampleRoutes = () => {
-    console.log('sample');
+handler.sampleHnadler = (requestProperty, callback) => {
+    callback(200, {
+        massage: 'this is sample',
+    });
 };
 
 module.exports = handler;

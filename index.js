@@ -4,19 +4,23 @@
 // Dependency
 const http = require('http');
 const { handleReqRes } = require('./helpers/handleReqRes');
+const environments = require('./helpers/environments');
+const fileLib = require('./lib/data');
 
 const app = {};
 
+// @TODO: test
+fileLib.delete('test', 'test', (err) => {
+    console.log(err);
+});
+
 // configaration
-app.config = {
-    port: 3000,
-};
 
 // create server
 app.createServer = () => {
     const server = http.createServer(app.handleReqRes);
-    server.listen(app.config.port, () => {
-        console.log(`Listening at por ${app.config.port}`);
+    server.listen(environments.port, () => {
+        console.log(`Listening at por ${environments.port}`);
     });
 };
 

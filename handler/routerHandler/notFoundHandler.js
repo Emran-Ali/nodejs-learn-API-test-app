@@ -2,8 +2,10 @@
 
 const handler = {};
 
-handler.notFound = () => {
-    console.log('Routes Not Found');
+handler.notFound = (requestProperty, callback) => {
+    callback(404, {
+        massage: 'this is not Found',
+    });
 };
 
 module.exports = handler;
