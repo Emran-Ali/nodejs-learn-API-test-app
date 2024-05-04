@@ -22,5 +22,18 @@ utility.hash = (pass) => {
     }
     return false;
 };
+utility.createToken = (len) => {
+    const length = typeof len === 'number' && len > 0 ? len : false;
+    if (length) {
+        const pChar = 'abcdzxrghshf1023456';
+        let output = '';
+        for (let i = 0; i < length; i += 1) {
+            const ch = pChar.charAt(Math.floor(Math.random() * pChar.length));
+            output += ch;
+        }
+        return output;
+    }
+    return false;
+};
 
 module.exports = utility;
