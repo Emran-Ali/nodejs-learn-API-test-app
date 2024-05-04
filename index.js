@@ -5,14 +5,13 @@
 const http = require('http');
 const { handleReqRes } = require('./helpers/handleReqRes');
 const environments = require('./helpers/environments');
-const fileLib = require('./lib/data');
 
 const app = {};
 
 // @TODO: test
-fileLib.delete('test', 'test', (err) => {
-    console.log(err);
-});
+// fileLib.delete('test', 'test', (err) => {
+//     console.log(err);
+// });
 
 // configaration
 
