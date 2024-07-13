@@ -181,7 +181,7 @@ handler._user.delete = (requestProperty, callback) => {
       ? requestProperty.body.phone
       : false;
   if (phone) {
-    const token = typeof requestProperty.headers.token === 'string'
+  const token = typeof requestProperty.headers.token === 'string'
         ? requestProperty.headers.token
         : false;
     varify._token.varify(token, phone, (res) => {
